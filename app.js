@@ -13,9 +13,9 @@ var passport = require('passport');
 var session = require('express-session'); 
 var GoogleStrategy = require('passport-google-oauth20').Strategy; 
 passport.use(new GoogleStrategy({ 
-  clientID: "",//process.env.GOOGLE_CLIENT_ID, // Use environment variable
-  clientSecret: "",//process.env.GOOGLE_CLIENT_SECRET, // Use environment variable
-  callbackURL: ""//process.env.CALLBACK_URL // Use environment variable
+  clientID: process.env.GOOGLE_CLIENT_ID, // Use environment variable
+  clientSecret: process.env.GOOGLE_CLIENT_SECRET, // Use environment variable
+  callbackURL: process.env.CALLBACK_URL // Use environment variable
 },
 
 function(accessToken, refreshToken, profile, cb) { 
