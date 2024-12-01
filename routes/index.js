@@ -13,7 +13,7 @@ var projects = [
 router.get('/', function(req, res, next) { 
   if(req.user && req.user.displayName){ 
     const displayName = req.user.displayName; 
-    req.user.displayName = null; 
+    // req.user.displayName = null; 
     res.render('users', { username: displayName, projects: projects }); 
   } 
   else{ 
